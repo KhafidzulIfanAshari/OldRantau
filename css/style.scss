@@ -1,0 +1,111 @@
+::-webkit-scrollbar{display: noe}
+@font-face {font-family: opensans;src: url(../font/OpenSans-Regular.ttf);}
+$primary: #F08519;
+$secondary: #DB934B;
+$counter: #87A137;
+*{margin: 0;padding: 0;font-family: opensans;}
+//-------------------------|-Navigation-|-------------------------
+.nav-fix{
+  width: 100%;padding: 20px 0;position: fixed;z-index: 99;display: flex;flex-wrap: wrap;
+  .nav{padding: 0 30px;}
+  .menu{color: white;font-size: 40px;transition: .2s;cursor: pointer;transition: .2s}
+  .left{@extend .menu;transform: rotateY(-90deg);transition: .2s;display: none;}
+}
+//-------------------------|-Navigation-Hide-|-------------------------
+.nav-hide{
+  width: 260px;height: 96vh;padding: 2vh 20px;position: fixed;background: rgba(0, 0, 0, 0.7);z-index: 99;display: flex;flex-wrap: wrap;flex-direction: column;transform: translateX(-100%);transition: .2s;
+  .logo{
+    width: 250px;overflow: hidden;
+    img{width: 100%;}
+  }
+  .navhide-nav{
+    color: white;padding: 10px 15px;border-left: thick solid $primary;margin: 5px 0;
+    &:hover{
+      cursor: pointer;
+      .under{width: 50%;}
+    }
+    .under{
+      width: 25%;height: 2px;background: $primary;transition: .2s;
+    }
+  }
+}
+//-------------------------|-Header-|-------------------------
+.header{
+  width: 100%;height: 100vh;display: flex;align-items: center;position: relative;overflow: hidden;
+  .bg-slow{z-index: 1;position: absolute;width: 100%;height: 100%;background: url(../img/Desk-Background-3E5.jpg) no-repeat center;background-size: cover;}
+  .title-wrap{
+    width: 90%;margin: auto;display: flex;align-items: center;color: white;flex-wrap: wrap;z-index: 2;
+    font{
+      margin: auto;
+      #t1{
+        width: 75px;height: 50px;margin-right: 20px;
+        polygon{fill: $primary}
+      }
+      #t2{
+        width: 34px;height: 20px;margin-left: 50px;
+        polygon{fill: $primary}
+      }
+    }
+    .down{
+      width: 100%;text-align: center;
+      .down-icon{
+        font-size: 70px;animation-name: down;animation-duration: 1s;animation-iteration-count: infinite;
+        &:hover{cursor: pointer;color: lighten($primary, 25%);}
+      }
+    }
+  }
+}
+@keyframes down {
+  0%{filter: drop-shadow(0 3px 1px black);}
+  50%{filter: drop-shadow(0 20px 3px black);}
+  100%{filter: drop-shadow(0 3px 1px black);}
+}
+//-------------------------|-Slide-1-|-------------------------
+.slide-1{
+  width: 100%;/*background: url(../img/Background2.png) no-repeat center;background-size: cover;background: $primary;*/padding: 25px 0 25px 0;display: flex;flex-wrap: wrap;align-items: center;
+  .main-title{width: 90%;padding: 20px 10px;margin: auto;font-size: 50px;color: $primary}
+  .box-wrap{
+    padding: 10px;margin: auto;width: 280px;
+    .info-titl{
+      color: $primary;font-weight: bold;padding: 0 0 7px 15px;border-left: thin solid $primary;border-bottom: thin solid $primary;
+    }
+    .info-img{
+      overflow: hidden;height: 200px;width: 100%;margin: 10px 0 0 0;overflow: hidden;position: relative;
+      img{
+        height: 100%;transition: .2s;z-index: 1;position: absolute;
+        &:hover{transform: scale(1.1, 1.1);opacity: 0.3;cursor: pointer;}
+      }
+      .price{z-index: 2;text-align: center;padding: 5px 10px;background: $primary;color: white;position: absolute;}
+    }
+    .info-text{padding: 5%;width: 90%;height: 100px;overflow: hidden;}
+    .order{
+      padding: 10px;background-color: $primary;text-align: center;color: white;
+      &:hover{background: $counter;}
+    }
+  }
+}
+//-------------------------|-Slide-2-|-------------------------
+.slide-2{
+  width: 90%;padding: 25px 5%;background: url(../img/wessels-joyce-associates-house-at-pezula.jpeg) no-repeat fixed center;background-size: cover;display: flex;align-items: center;
+  .promo{
+    color: white;text-align: center;margin: auto;font-size: 25px;
+    svg{width: 34px;height: 20px;fill:$primary;margin-right: 20px;}
+  }
+}
+//-------------------------|-Slide-3-|-------------------------
+.slide-3{
+  @extend .slide-1;overflow-x: auto;
+  table{
+    width: 1000px;margin: auto;
+    tr{
+      height: 50px;
+      th{background-color: lighten($primary, 10%);color: white;}
+      td{text-align: center;color: white;}
+      &:nth-child(odd){background: lighten($counter, 10%);}
+      &:nth-child(even){background: $counter;}
+    }
+  }
+}
+footer{
+
+}

@@ -1,0 +1,214 @@
+::-webkit-scrollbar {
+  display: noe; }
+
+@font-face {
+  font-family: opensans;
+  src: url(../font/OpenSans-Regular.ttf); }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: opensans; }
+
+.nav-fix {
+  width: 100%;
+  padding: 20px 0;
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  flex-wrap: wrap; }
+  .nav-fix .nav {
+    padding: 0 30px; }
+  .nav-fix .menu, .nav-fix .left {
+    color: white;
+    font-size: 40px;
+    transition: .2s;
+    cursor: pointer;
+    transition: .2s; }
+  .nav-fix .left {
+    transform: rotateY(-90deg);
+    transition: .2s;
+    display: none; }
+
+.nav-hide {
+  width: 260px;
+  height: 96vh;
+  padding: 2vh 20px;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: .2s; }
+  .nav-hide .logo {
+    width: 250px;
+    overflow: hidden; }
+    .nav-hide .logo img {
+      width: 100%; }
+  .nav-hide .navhide-nav {
+    color: white;
+    padding: 10px 15px;
+    border-left: thick solid #F08519;
+    margin: 5px 0; }
+    .nav-hide .navhide-nav:hover {
+      cursor: pointer; }
+      .nav-hide .navhide-nav:hover .under {
+        width: 50%; }
+    .nav-hide .navhide-nav .under {
+      width: 25%;
+      height: 2px;
+      background: #F08519;
+      transition: .2s; }
+
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; }
+  .header .bg-slow {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/Desk-Background-3E5.jpg) no-repeat center;
+    background-size: cover; }
+  .header .title-wrap {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+    z-index: 2; }
+    .header .title-wrap font {
+      margin: auto; }
+      .header .title-wrap font #t1 {
+        width: 75px;
+        height: 50px;
+        margin-right: 20px; }
+        .header .title-wrap font #t1 polygon {
+          fill: #F08519; }
+      .header .title-wrap font #t2 {
+        width: 34px;
+        height: 20px;
+        margin-left: 50px; }
+        .header .title-wrap font #t2 polygon {
+          fill: #F08519; }
+    .header .title-wrap .down {
+      width: 100%;
+      text-align: center; }
+      .header .title-wrap .down .down-icon {
+        font-size: 70px;
+        animation-name: down;
+        animation-duration: 1s;
+        animation-iteration-count: infinite; }
+        .header .title-wrap .down .down-icon:hover {
+          cursor: pointer;
+          color: #f8c491; }
+
+@keyframes down {
+  0% {
+    filter: drop-shadow(0 3px 1px black); }
+  50% {
+    filter: drop-shadow(0 20px 3px black); }
+  100% {
+    filter: drop-shadow(0 3px 1px black); } }
+.slide-1, .slide-3 {
+  width: 100%;
+  /*background: url(../img/Background2.png) no-repeat center;background-size: cover;background: $primary;*/
+  padding: 25px 0 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  .slide-1 .main-title, .slide-3 .main-title {
+    width: 90%;
+    padding: 20px 10px;
+    margin: auto;
+    font-size: 50px;
+    color: #F08519; }
+  .slide-1 .box-wrap, .slide-3 .box-wrap {
+    padding: 10px;
+    margin: auto;
+    width: 280px; }
+    .slide-1 .box-wrap .info-titl, .slide-3 .box-wrap .info-titl {
+      color: #F08519;
+      font-weight: bold;
+      padding: 0 0 7px 15px;
+      border-left: thin solid #F08519;
+      border-bottom: thin solid #F08519; }
+    .slide-1 .box-wrap .info-img, .slide-3 .box-wrap .info-img {
+      overflow: hidden;
+      height: 200px;
+      width: 100%;
+      margin: 10px 0 0 0;
+      overflow: hidden;
+      position: relative; }
+      .slide-1 .box-wrap .info-img img, .slide-3 .box-wrap .info-img img {
+        height: 100%;
+        transition: .2s;
+        z-index: 1;
+        position: absolute; }
+        .slide-1 .box-wrap .info-img img:hover, .slide-3 .box-wrap .info-img img:hover {
+          transform: scale(1.1, 1.1);
+          opacity: 0.3;
+          cursor: pointer; }
+      .slide-1 .box-wrap .info-img .price, .slide-3 .box-wrap .info-img .price {
+        z-index: 2;
+        text-align: center;
+        padding: 5px 10px;
+        background: #F08519;
+        color: white;
+        position: absolute; }
+    .slide-1 .box-wrap .info-text, .slide-3 .box-wrap .info-text {
+      padding: 5%;
+      width: 90%;
+      height: 100px;
+      overflow: hidden; }
+    .slide-1 .box-wrap .order, .slide-3 .box-wrap .order {
+      padding: 10px;
+      background-color: #F08519;
+      text-align: center;
+      color: white; }
+      .slide-1 .box-wrap .order:hover, .slide-3 .box-wrap .order:hover {
+        background: #87A137; }
+
+.slide-2 {
+  width: 90%;
+  padding: 25px 5%;
+  background: url(../img/wessels-joyce-associates-house-at-pezula.jpeg) no-repeat fixed center;
+  background-size: cover;
+  display: flex;
+  align-items: center; }
+  .slide-2 .promo {
+    color: white;
+    text-align: center;
+    margin: auto;
+    font-size: 25px; }
+    .slide-2 .promo svg {
+      width: 34px;
+      height: 20px;
+      fill: #F08519;
+      margin-right: 20px; }
+
+.slide-3 {
+  overflow-x: auto; }
+  .slide-3 table {
+    width: 1000px;
+    margin: auto; }
+    .slide-3 table tr {
+      height: 50px; }
+      .slide-3 table tr th {
+        background-color: #f39e49;
+        color: white; }
+      .slide-3 table tr td {
+        text-align: center;
+        color: white; }
+      .slide-3 table tr:nth-child(odd) {
+        background: #a4c14a; }
+      .slide-3 table tr:nth-child(even) {
+        background: #87A137; }
+
+/*# sourceMappingURL=style.css.map */
